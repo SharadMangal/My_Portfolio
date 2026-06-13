@@ -6,10 +6,10 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "JKLU Eezy",
-      tagline: "Campus Utility App",
+      tagline: "A campus, in your pocket.",
       slug: "jklu-eezy",
       type: "mobile",
-      desc: "Built a full-stack campus utility app with features like contact directory, mess management, lost-and-found, complaints, and study materials. Implemented secure login using JWT & Flutter Secure Storage, AWS S3 for file uploads, and optimized REST APIs for smooth and scalable performance.",
+      desc: "Picture this: a freshman lost on day one. No idea where the mess is, can't find the lost ID card, doesn't know which professor takes which class. So I drew the campus as an app — directory, mess, lost & found, complaints, study material — all behind one secure login.",
       tech: ["Flutter", "Node.js", "MongoDB", "AWS S3", "JWT"],
       status: "live",
       url: "https://sharadmangal.github.io/JKLUEesy_resume/",
@@ -30,11 +30,11 @@ const ProjectsSection = () => {
     {
       id: 3,
       title: "Guru",
-      tagline: "Voice Assistant App",
+      tagline: "Voice assistant + DALL·E imagination.",
       slug: "guru-ai",
       type: "mobile",
-      desc: "A Voice Assistant App with ChatGPT & DALL·E integrates conversational AI and image generation to enable users to interact using voice commands and receive intelligent responses along with AI-generated visuals.",
-      tech: ["Flutter", "ChatGPT API", "DALL-E API"],
+      desc: "What if you could just talk to an app and it answered you AND drew what you described? Guru listens, thinks with ChatGPT, paints with DALL·E. A pocket genie.",
+      tech: ["Flutter", "ChatGPT API", "DALL·E"],
       status: "live",
       url: "https://sharadmangal.github.io/guru/",
       previewLabel: "LIVE PREVIEW"
@@ -42,11 +42,11 @@ const ProjectsSection = () => {
     {
       id: 4,
       title: "MeBlogs",
-      tagline: "Blogging platform",
+      tagline: "Stories with AI-illustrated covers.",
       slug: "meblogs",
       type: "mobile",
-      desc: "A feature-rich platform empowering individuals to share stories and ideas globally. Designed for seamless content creation and discovery, offering a modern and intuitive user experience.",
-      tech: ["Flutter", "ChatGPT API", "DALL-E API"],
+      desc: "Writing is hard. Finding the right cover image is harder. MeBlogs lets you write — and the AI handles the artwork. A modern, minimal blogging surface for the daydreamer in everyone.",
+      tech: ["Flutter", "ChatGPT", "DALL·E"],
       status: "live",
       url: "https://sharadmangal.github.io/meBlogs/",
       previewLabel: "LIVE PREVIEW"
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
       tagline: "E-commerce Platform",
       slug: "house-of-kasya",
       type: "web",
-      desc: "Built a unified e-commerce system integrating data from multiple APIs. Performed data cleaning and analysis for better insights.",
+      desc: "An e-commerce brand had data scattered across five platforms. I built a layer that pulls everything in, cleans it up, and surfaces insights — powered by Claude MCP for the smart bits.",
       tech: ["PostgreSQL", "Node.js", "Next.js", "Claude MCP"],
       status: "live",
       url: "https://sharadmangal.github.io/EcomAnalysisResume",
@@ -93,20 +93,20 @@ const ProjectsSection = () => {
               <div className="project-label-top">PROJECT.0{proj.id} &mdash; THE STORY</div>
               <h3 className="project-tagline">{proj.tagline}</h3>
               <p className="project-desc-text">{proj.desc}</p>
-              
+
               {proj.type === 'mobile' && proj.url && (
                 <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <img src={`https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=${encodeURIComponent(proj.url)}`} alt="Scan to open on phone" style={{ width: '70px', height: '70px', border: '2px solid var(--text-primary)', padding: '4px', backgroundColor: '#f6f5ef' }} />
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>SCAN TO OPEN<br/>ON PHONE</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>SCAN TO OPEN<br />ON PHONE</span>
                 </div>
               )}
 
               <div className="decorative-dot-proj"></div>
             </div>
-            
+
             <div className="project-visual">
               <div className={proj.type === 'mobile' ? 'mobile-window' : 'browser-window'}>
-                
+
                 {proj.type === 'web' ? (
                   <div className="browser-topbar">
                     <div className="browser-dots">
@@ -114,7 +114,7 @@ const ProjectsSection = () => {
                     </div>
                     <div className="browser-title">{proj.slug.toUpperCase()}</div>
                     {proj.status === 'live' ? (
-                      <a href={proj.url || '#'} target="_blank" rel="noreferrer" className="browser-link" style={{textDecoration: 'none'}}>live preview &#10022;</a>
+                      <a href={proj.url || '#'} target="_blank" rel="noreferrer" className="browser-link" style={{ textDecoration: 'none' }}>live preview &#10022;</a>
                     ) : (
                       <div className="browser-link">coming soon</div>
                     )}
@@ -124,23 +124,24 @@ const ProjectsSection = () => {
                     <div className="mobile-notch"></div>
                   </div>
                 )}
-                
+
                 <div className={proj.type === 'mobile' ? "mobile-content-image" : "browser-content-image"}>
                   {proj.status === 'live' ? (
-                    <div style={{position: 'relative', width: '100%', height: '100%'}}>
-                      <iframe 
-                        src={proj.url || 'about:blank'} 
+                    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                      <iframe
+                        src={proj.url || 'about:blank'}
                         title={proj.title}
-                        style={{width: '100%', height: '100%', border: 'none'}}
+                        style={{ width: '100%', height: '100%', border: 'none' }}
+                        allow=""
                       />
                       {/* Invisible overlay so click opens new tab instead of interacting with iframe */}
-                      <a href={proj.url || '#'} target="_blank" rel="noreferrer" style={{position: 'absolute', inset: 0, zIndex: 10}}></a>
+                      <a href={proj.url || '#'} target="_blank" rel="noreferrer" style={{ position: 'absolute', inset: 0, zIndex: 10 }}></a>
                     </div>
                   ) : (
-                    <img 
-                      src={`/placeholder-${proj.slug}.png`} 
-                      alt={`${proj.slug} mockup`} 
-                      onError={(e) => { e.target.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000'; }} 
+                    <img
+                      src={`/placeholder-${proj.slug}.png`}
+                      alt={`${proj.slug} mockup`}
+                      onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000'; }}
                     />
                   )}
                   {proj.status === 'coming_soon' && (
@@ -157,11 +158,11 @@ const ProjectsSection = () => {
                   </div>
                   <div className="browser-footer-right">
                     {proj.status === 'coming_soon' ? (
-                       <button className="btn-link-status">link &bull; coming soon</button>
+                      <button className="btn-link-status">link &bull; coming soon</button>
                     ) : (
-                       proj.type === 'mobile' && (
-                         <a href={proj.url || '#'} target="_blank" rel="noreferrer" className="btn-link-status active">live preview &#8599;</a>
-                       )
+                      proj.type === 'mobile' && (
+                        <a href={proj.url || '#'} target="_blank" rel="noreferrer" className="btn-link-status active">live preview &#8599;</a>
+                      )
                     )}
                   </div>
                 </div>
