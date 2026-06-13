@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ResumeSection.css';
 
 const ResumeSection = () => {
-  const [showPreview, setShowPreview] = useState(false);
 
   return (
     <section className="resume-section container" id="resume">
@@ -19,10 +18,10 @@ const ResumeSection = () => {
           <div className="resume-actions-container">
             <div className="decorative-dot-small"></div>
             <div className="resume-actions">
-              <button className="btn-primary" onClick={() => setShowPreview(!showPreview)}>
-                <span className="icon">&#128196;</span> {showPreview ? 'CLOSE PREVIEW' : 'OPEN FULL PREVIEW'}
-              </button>
-              <a href="/Resume_Sharad.pdf" download className="btn-secondary">
+              <a href="https://drive.google.com/file/d/1M_s1p7whULCrie9HGXfWiuYPakcsYP_y/view?usp=sharing" target="_blank" rel="noreferrer" className="btn-primary">
+                <span className="icon">&#128196;</span> OPEN FULL IN NEW TAB
+              </a>
+              <a href="https://drive.google.com/uc?export=download&id=1M_s1p7whULCrie9HGXfWiuYPakcsYP_y" className="btn-secondary">
                 <span className="icon">&#8681;</span> DOWNLOAD .PDF
               </a>
             </div>
@@ -33,11 +32,7 @@ const ResumeSection = () => {
           <div className="resume-document-container">
             <div className="tape"></div>
             <div className="resume-document">
-              {showPreview ? (
-                <iframe src="/Resume_Sharad.pdf" title="Resume Preview" className="pdf-viewer" />
-              ) : (
-                <div className="resume-placeholder"></div>
-              )}
+              <iframe src="https://drive.google.com/file/d/1M_s1p7whULCrie9HGXfWiuYPakcsYP_y/preview" title="Resume Preview" className="pdf-viewer" />
             </div>
           </div>
         </div>
