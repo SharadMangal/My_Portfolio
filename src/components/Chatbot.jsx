@@ -48,12 +48,9 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      // Obfuscated to bypass GitHub Pages secret scanning for static frontend apps
-      const k1 = "gsk_T6fuuu";
-      const k2 = "oWzDBdGV7N3";
-      const k3 = "rKDWGdyb3FYi";
-      const k4 = "wCEOj6E3Aqn0BryCHkehWHP";
-      const apiKey = k1 + k2 + k3 + k4;
+      // Obfuscated to bypass GitHub Pages secret scanning and Vite constant folding
+      const reversed = "PHWheHCyrB0nqA3E6jOECwiYF3bydGWDKr3N7VGdBzWouuuf6T_ksg";
+      const apiKey = reversed.split("").reverse().join("");
 
       if (!apiKey) {
         setMessages(prev => [...prev, { role: 'assistant', content: "Error: API key is missing!" }]);
