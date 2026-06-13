@@ -1,0 +1,168 @@
+.contact-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contact-left .section-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--bg-dark);
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--text-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.social-box:hover {
+  background-color: #e5e4de;
+}
+
+.contact-right {
+  position: relative;
+}
+
+.contact-form-container {
+  background-color: #f6f5ef;
+  padding: 3rem;
+  border: 2px solid var(--text-primary);
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid var(--text-primary);
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.btn-submit {
+  align-self: flex-start;
+  background-color: var(--bg-dark);
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-submit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.decorative-dot-contact {
+  position: absolute;
+  bottom: -2rem;
+  left: -2rem;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--text-primary);
+  border-radius: 50%;
+}
+.decorative-dot-contact::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

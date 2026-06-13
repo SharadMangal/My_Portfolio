@@ -1,0 +1,349 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  color: var(--bg-dark);
+}
+
+.italic-serif {
+  font-style: italic;
+  font-family: var(--font-heading);
+}
+
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  bottom: 8%;
+  left: -2%;
+  width: 104%;
+  height: 30%;
+  background-color: rgba(159, 178, 158, 0.4);
+  z-index: -1;
+  transform: rotate(-0.5deg);
+}
+
+.hero-description {
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  font-size: 1.05rem;
+}
+
+.greeting {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-text {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--text-muted);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icon-box {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: transparent;
+  color: var(--text-primary);
+}
+.social-icon-box:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+}
+
+/* Right Column Visuals - CSS Illustration */
+.hero-visual {
+  position: relative;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky-note {
+  width: 95%;
+  height: 100%;
+  background-color: #f9f8f4;
+  border: 2px solid var(--text-primary);
+  border-radius: 4px;
+  box-shadow: 12px 12px 0px rgba(0,0,0,0.08);
+  position: relative;
+  transform: rotate(1deg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 10%;
+  width: 60px;
+  height: 20px;
+  background-color: var(--accent-pink);
+  opacity: 0.8;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.quote {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: auto;
+  color: var(--text-primary);
+}
+
+/* CSS Art */
+.illustration-wrapper {
+  position: relative;
+  flex: 1;
+  width: 100%;
+}
+
+.speech-bubble {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  text-align: center;
+  background: white;
+  z-index: 10;
+}
+.speech-bubble strong { font-family: var(--font-body); font-size: 0.9rem; }
+.speech-tail {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 2px;
+  height: 30px;
+  background-color: var(--text-primary);
+  transform: rotate(-30deg);
+}
+
+.person {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+.head {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+}
+.eyes {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.eyes span { width: 4px; height: 4px; background: var(--text-primary); border-radius: 50%; }
+.mouth {
+  position: absolute;
+  top: 25px;
+  left: 12px;
+  width: 16px;
+  height: 6px;
+  border-bottom: 2px solid var(--text-primary);
+  border-radius: 0 0 10px 10px;
+}
+.body {
+  width: 60px;
+  height: 30px;
+  background-color: var(--accent-green);
+  border: 2px solid var(--text-primary);
+  border-radius: 30px 30px 0 0;
+  margin-top: -5px;
+}
+
+.desk {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  width: 70%;
+  height: 80px;
+  z-index: 3;
+}
+.desk-line {
+  width: 100%;
+  height: 6px;
+  background-color: var(--text-primary);
+  position: absolute;
+  top: 40px;
+}
+.desk-leg {
+  width: 4px;
+  height: 40px;
+  background-color: var(--text-primary);
+  position: absolute;
+  top: 46px;
+}
+.desk-leg.left { left: 10%; }
+.desk-leg.right { right: 10%; }
+
+.laptop {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 60px;
+  background-color: #d8cdba;
+  border: 2px solid var(--text-primary);
+  border-radius: 4px;
+  padding: 5px;
+}
+.screen {
+  background-color: var(--text-primary);
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  padding: 4px;
+}
+
+.mug {
+  position: absolute;
+  bottom: 40px;
+  right: 15%;
+  width: 15px;
+  height: 20px;
+  border: 2px solid var(--text-primary);
+  border-top: none;
+  background: white;
+}
+.mug-handle {
+  position: absolute;
+  top: 2px;
+  right: -6px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid var(--text-primary);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.tech-box {
+  border: 1.5px solid var(--text-primary);
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  background: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.tech-stack-left {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+.tech-stack-right {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+.solution-box {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  background-color: rgba(209, 180, 183, 0.4);
+  padding: 0.5rem;
+  width: 160px;
+}
+.solution-title {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  border-bottom: 1.5px solid var(--text-primary);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.solution-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+}
+.solution-content .icon {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status-code {
+  color: #666;
+  font-size: 0.5rem;
+}
+
+.connecting-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}

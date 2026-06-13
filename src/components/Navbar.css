@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navbar-logo {
+  background-color: var(--accent-green);
+  color: var(--bg-dark);
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid var(--text-primary);
+  /* Slight rotation to make it feel hand-placed */
+  transform: rotate(-3deg);
+}
+
+.navbar-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.1;
+  color: var(--bg-dark);
+}
+
+.navbar-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: var(--bg-dark);
+}
+
+.navbar-links a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-links a:hover {
+  opacity: 0.6;
+}

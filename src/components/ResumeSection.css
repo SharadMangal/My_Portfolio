@@ -1,0 +1,125 @@
+.resume-section {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.resume-left .section-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--bg-dark);
+  margin-bottom: 1rem;
+}
+
+.resume-left .section-subtitle {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.resume-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.resume-actions-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.decorative-dot-small {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--text-primary);
+  border-radius: 50%;
+  position: relative;
+}
+.decorative-dot-small::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.resume-actions .btn-primary,
+.resume-actions .btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-document-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1.1;
+  background-color: white;
+  border: 2px solid var(--text-primary);
+  box-shadow: -8px 12px 0px rgba(0,0,0,0.05);
+  transform: rotate(0.5deg);
+  padding: 1rem;
+}
+
+.resume-document-container .tape {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 70px;
+  height: 25px;
+  background-color: rgba(209, 180, 183, 0.7);
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.resume-document {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eee;
+  overflow: hidden;
+  background-color: white;
+}
+
+.resume-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+}

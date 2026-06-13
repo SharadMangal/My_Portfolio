@@ -1,0 +1,26 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  color: #fff;
+  padding: 1.25rem 0;
+  white-space: nowrap;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+
+.marquee-content span {
+  padding-right: 1rem;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

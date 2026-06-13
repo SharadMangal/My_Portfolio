@@ -1,0 +1,144 @@
+.experience-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.experience-section .section-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: var(--bg-dark);
+  margin-bottom: 4rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.5px;
+  background-color: var(--text-primary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 20px;
+  left: -2rem;
+  width: 14px;
+  height: 14px;
+  background-color: #aed3d9;
+  border: 1.5px solid var(--text-primary);
+  transform: translateX(-7px);
+}
+
+.experience-card {
+  background-color: #f6f5ef;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.04);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.company-name {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--bg-dark);
+}
+
+.experience-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.job-title {
+  font-family: var(--font-script);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.job-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 85%;
+}
+
+.experience-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid var(--text-primary);
+  background-color: #dfdbce;
+}
+
+.artifact-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+.artifact-link:hover {
+  opacity: 0.7;
+}
+
+.decorative-dot {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 25%;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--text-primary);
+  border-radius: 50%;
+}
+.decorative-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
